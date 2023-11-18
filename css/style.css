@@ -1,0 +1,308 @@
+@font-face {
+    font-family: 'Cicada';
+    src: url('../font/CicadaRegular.otf') format('opentype'),
+         url('../font/CicadaRegular.ttf') format('truetype');
+}
+  
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.Ccontainer{
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+    width: 100vw;
+}
+
+section{
+    height: 100vh;
+    width: 100vw;
+    scroll-snap-align: start;
+    display: flex;
+    background-color: #FFD1DC;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cicada', sans-serif;
+    line-height: 1.2;
+    color: #FFFFB3;
+}
+
+p{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#primero{
+    background-image: url("../photos/wallpaper.png");
+    object-fit: cover;
+    background-color: #FFD1DC;
+    background-size: cover;
+    background-position: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.textoInicio{
+    background-color: #B4D7FE;
+    color: #FFFFB3;
+    width: 35%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    border-radius: 20px;
+    font-size: x-large;
+}
+
+.textoInicio h1{
+    display: flex;
+    align-items: start;
+}
+
+#segundo, #tercero{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: underline;
+}
+
+.cajas{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: start;
+}
+
+.caja{
+    width: 25%;
+    height: 80%;
+    background-color: #B4D7FE;
+    border-radius: 10px;
+    padding: 12px 3px 12px 3px;
+    text-align: center;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.caja h3{
+    color: #FFFFB3;
+    text-decoration: underline;
+}
+
+.caja p{
+    color: #ffffff;
+    font-style: italic;
+}
+
+.slider{
+    
+    scroll-snap-type: x mandatory;
+    overflow-x: scroll;
+    width: 50%;
+    height: 75%;
+    display: flex;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+
+}
+
+.imagenes{
+    background-color: #B4D7FE;
+    height: 100%;
+    width: 100%;
+    scroll-snap-align: center;
+    flex: 0 0 auto;
+    scroll-snap-stop: always;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    justify-content: space-between;
+}
+
+
+
+.imagenes img{
+    height: 100%;
+    width: auto;
+}
+
+.imagenes p{
+    height: 100%;
+    width: 60%;
+    padding: 20px;
+    color: white;
+}
+
+.botonSiguiente{
+    height: 100%;
+    width: 7%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    color: white;
+    font-size: larger;
+}
+
+.botonSiguiente a{
+    text-decoration: none;
+    color: white;
+}
+
+.botonSiguiente a:hover{
+    text-decoration: none;
+    color: #FFFFB3;
+}
+
+.botonAnterior{
+    height: 100%;
+    width: 7%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: larger;
+    background: rgb(0,0,0);
+}
+
+.botonAnterior a{
+    text-decoration: none;
+    color: white;
+}
+
+.botonAnterior a:hover{
+    text-decoration: none;
+    color: #FFFFB3;
+}
+
+#terceraImagen{
+    font-size: 13px;
+}
+
+.final{
+    height: 100%;
+    width: 93%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+#cuarto{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.carta{
+    width: 20%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#cuarto img{
+    width: 150px;
+    height: auto;
+}
+
+/* Estilos para los modales */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background-color: transparent !important;
+    padding: 20px;
+    width: 40% !important;
+    height: 70% !important;
+    border: none !important;
+    text-align: center;
+    color: black;
+    background-image: url(../photos/paper.jpg);
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    box-shadow: #aaa;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .modal-content p{
+    padding: 5%;
+    line-height: 1.7;
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    margin-left: 90%;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  #modal1 .modal-content{
+    display: block;
+  }
+
+  #modal1 img{
+    height: 100px;
+    width: 100px;
+  }
+
+  .modal2img{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+  }
+
+  .modal2img img{
+    height: 100%;
+    width: auto;
+  }
+  
+  #modal1 p, #modal2 p{
+    font-size: 14px;
+  }
